@@ -21,29 +21,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="395" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-z1-XBo">
-                        <rect key="frame" x="77.333333333333329" y="40" width="240.66666666666669" height="50"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tmv-lh-69O">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="CPa-JD-i9m"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7L-lc-p4M">
-                                <rect key="frame" x="102.00000000000001" y="0.0" width="36.666666666666671" height="50"/>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3R-fw-W5a">
-                                <rect key="frame" x="190.66666666666669" y="0.0" width="50" height="50"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="T7L-lc-p4M" firstAttribute="centerX" secondItem="MDl-z1-XBo" secondAttribute="centerX" id="AeE-a9-imz"/>
-                        </constraints>
-                    </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-xf-wzH" customClass="RadioButton" customModule="Premier_League_Match_Grinta_iOS_Task" customModuleProvider="target">
                         <rect key="frame" x="320" y="5" width="70" height="30"/>
                         <state key="normal" title="Button"/>
@@ -52,22 +29,77 @@
                             <action selector="saveToFavouritesButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="REc-5H-eRE"/>
                         </connections>
                     </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nKU-jG-KIN">
+                        <rect key="frame" x="58" y="30.666666666666671" width="279.33333333333331" height="69"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-Y8-7Ci">
+                                <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="69"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3R-fw-W5a">
+                                        <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gRr-jE-uWy"/>
+                                            <constraint firstAttribute="width" constant="50" id="rOE-fi-S27"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machnester City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-tZ-1a0">
+                                        <rect key="frame" x="0.0" y="52" width="100.33333333333333" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="csO-Iz-3AT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7L-lc-p4M">
+                                <rect key="frame" x="121.33333333333336" y="0.0" width="36.666666666666671" height="69"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="77q-li-IKM">
+                                <rect key="frame" x="179" y="0.0" width="100.33333333333331" height="69"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLZ-gI-fmx">
+                                        <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="sXp-Hu-tve"/>
+                                            <constraint firstAttribute="height" constant="50" id="wDC-My-owT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machnester City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feV-81-Z5J">
+                                        <rect key="frame" x="0.0" y="52" width="100.33333333333333" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="b3n-Zn-2bc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Udb-xf-wzH" secondAttribute="trailing" constant="5" id="2IJ-gC-tVu"/>
+                    <constraint firstItem="nKU-jG-KIN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Apl-Jh-Wr9"/>
                     <constraint firstItem="Udb-xf-wzH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="320" id="Bkh-Aa-IGv"/>
                     <constraint firstAttribute="bottom" secondItem="Udb-xf-wzH" secondAttribute="bottom" constant="95" id="Drk-ct-MfY"/>
                     <constraint firstItem="Udb-xf-wzH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="HhN-qg-UgF"/>
-                    <constraint firstItem="MDl-z1-XBo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Tew-Bv-d1f"/>
-                    <constraint firstItem="MDl-z1-XBo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="k3U-Ac-MYC"/>
+                    <constraint firstItem="nKU-jG-KIN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SMe-45-e3b"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="awayTeamImage" destination="v3R-fw-W5a" id="flZ-fl-J6L"/>
-                <outlet property="homeTeamImage" destination="tmv-lh-69O" id="O7s-EX-oPd"/>
+                <outlet property="awayTeamImage" destination="PLZ-gI-fmx" id="tET-ot-f9o"/>
+                <outlet property="awayTeamNameLabel" destination="feV-81-Z5J" id="dVh-1B-Zbp"/>
+                <outlet property="homeTeamImage" destination="v3R-fw-W5a" id="dj0-gy-JkL"/>
+                <outlet property="homeTeamNameLabel" destination="Lfn-tZ-1a0" id="FOK-hY-GAs"/>
                 <outlet property="saveToFavouritesButton" destination="Udb-xf-wzH" id="DKz-Nz-ucb"/>
-                <outlet property="statusLabel" destination="T7L-lc-p4M" id="L4P-fD-V99"/>
+                <outlet property="statusLabel" destination="T7L-lc-p4M" id="2KZ-AI-SVp"/>
             </connections>
             <point key="canvasLocation" x="9.9236641221374047" y="19.014084507042256"/>
         </tableViewCell>

@@ -11,9 +11,12 @@ class MatchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var homeTeamImage: UIImageView!
     @IBOutlet weak var awayTeamImage: UIImageView!
+    @IBOutlet weak var homeTeamNameLabel: UILabel!
+    @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var saveToFavouritesButton: RadioButton!
     var onFavButtonTapped: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
