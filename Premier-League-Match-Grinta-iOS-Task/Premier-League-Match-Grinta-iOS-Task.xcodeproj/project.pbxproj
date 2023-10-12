@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
+		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
+		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
+		ABEFBD0F2AD82B3800AEBD88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEFBD0D2AD82B3800AEBD88 /* Main.storyboard */; };
+		ABEFBD112AD82B3900AEBD88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEFBD102AD82B3900AEBD88 /* Assets.xcassets */; };
+		ABEFBD142AD82B3900AEBD88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEFBD122AD82B3900AEBD88 /* LaunchScreen.storyboard */; };
+		ABEFBD1F2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD1E2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift */; };
+		ABEFBD292AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD282AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITests.swift */; };
+		ABEFBD2B2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD2A2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift */; };
+		ABEFBD3C2AD82B7800AEBD88 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */; };
+		ABEFBD3F2AD82B7F00AEBD88 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD3E2AD82B7F00AEBD88 /* Alamofire */; };
+		ABEFBD422AD82B8700AEBD88 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD412AD82B8700AEBD88 /* SDWebImageSwiftUI */; };
+		ABEFBD462AD82B9E00AEBD88 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD452AD82B9E00AEBD88 /* RxCocoa */; };
+		ABEFBD482AD82BA100AEBD88 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD472AD82BA100AEBD88 /* RxRelay */; };
+		ABEFBD4A2AD82BA600AEBD88 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD492AD82BA600AEBD88 /* RxSwift */; };
+		ABEFBD4C2AD82BAB00AEBD88 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD4B2AD82BAB00AEBD88 /* RxBlocking */; };
+		ABEFBD4E2AD82BB100AEBD88 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD4D2AD82BB100AEBD88 /* RxTest-Dynamic */; };
+		ABEFBD4F2AD82BB100AEBD88 /* RxTest-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ABEFBD4D2AD82BB100AEBD88 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABEFBD1B2AD82B3900AEBD88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABEFBCFC2AD82B3800AEBD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABEFBD032AD82B3800AEBD88;
+			remoteInfo = "Premier-League-Match-Grinta-iOS-Task";
+		};
+		ABEFBD252AD82B3900AEBD88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABEFBCFC2AD82B3800AEBD88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABEFBD032AD82B3800AEBD88;
+			remoteInfo = "Premier-League-Match-Grinta-iOS-Task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABEFBD502AD82BB200AEBD88 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ABEFBD4F2AD82BB100AEBD88 /* RxTest-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABEFBD0E2AD82B3800AEBD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABEFBD102AD82B3900AEBD88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABEFBD132AD82B3900AEBD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABEFBD152AD82B3900AEBD88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEFBD1A2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFBD1E2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_League_Match_Grinta_iOS_TaskTests.swift; sourceTree = "<group>"; };
+		ABEFBD242AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFBD282AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_League_Match_Grinta_iOS_TaskUITests.swift; sourceTree = "<group>"; };
+		ABEFBD2A2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABEFBD012AD82B3800AEBD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD4A2AD82BA600AEBD88 /* RxSwift in Frameworks */,
+				ABEFBD482AD82BA100AEBD88 /* RxRelay in Frameworks */,
+				ABEFBD422AD82B8700AEBD88 /* SDWebImageSwiftUI in Frameworks */,
+				ABEFBD3C2AD82B7800AEBD88 /* OptionallyDecodable in Frameworks */,
+				ABEFBD462AD82B9E00AEBD88 /* RxCocoa in Frameworks */,
+				ABEFBD3F2AD82B7F00AEBD88 /* Alamofire in Frameworks */,
+				ABEFBD4C2AD82BAB00AEBD88 /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD172AD82B3900AEBD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD4E2AD82BB100AEBD88 /* RxTest-Dynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD212AD82B3900AEBD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABEFBCFB2AD82B3800AEBD88 = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD062AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */,
+				ABEFBD1D2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests */,
+				ABEFBD272AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests */,
+				ABEFBD052AD82B3800AEBD88 /* Products */,
+				ABEFBD442AD82B9E00AEBD88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ABEFBD052AD82B3800AEBD88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */,
+				ABEFBD1A2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests.xctest */,
+				ABEFBD242AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABEFBD062AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */,
+				ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */,
+				ABEFBD372AD82B4900AEBD88 /* Model */,
+				ABEFBD382AD82B4E00AEBD88 /* ViewModel */,
+				ABEFBD392AD82B5200AEBD88 /* View */,
+				ABEFBD102AD82B3900AEBD88 /* Assets.xcassets */,
+				ABEFBD122AD82B3900AEBD88 /* LaunchScreen.storyboard */,
+				ABEFBD152AD82B3900AEBD88 /* Info.plist */,
+			);
+			path = "Premier-League-Match-Grinta-iOS-Task";
+			sourceTree = "<group>";
+		};
+		ABEFBD1D2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD1E2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift */,
+			);
+			path = "Premier-League-Match-Grinta-iOS-TaskTests";
+			sourceTree = "<group>";
+		};
+		ABEFBD272AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD282AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITests.swift */,
+				ABEFBD2A2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift */,
+			);
+			path = "Premier-League-Match-Grinta-iOS-TaskUITests";
+			sourceTree = "<group>";
+		};
+		ABEFBD372AD82B4900AEBD88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABEFBD382AD82B4E00AEBD88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABEFBD392AD82B5200AEBD88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */,
+				ABEFBD0D2AD82B3800AEBD88 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABEFBD442AD82B9E00AEBD88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABEFBD032AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFBD2E2AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-Task" */;
+			buildPhases = (
+				ABEFBD002AD82B3800AEBD88 /* Sources */,
+				ABEFBD012AD82B3800AEBD88 /* Frameworks */,
+				ABEFBD022AD82B3800AEBD88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Premier-League-Match-Grinta-iOS-Task";
+			packageProductDependencies = (
+				ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */,
+				ABEFBD3E2AD82B7F00AEBD88 /* Alamofire */,
+				ABEFBD412AD82B8700AEBD88 /* SDWebImageSwiftUI */,
+				ABEFBD452AD82B9E00AEBD88 /* RxCocoa */,
+				ABEFBD472AD82BA100AEBD88 /* RxRelay */,
+				ABEFBD492AD82BA600AEBD88 /* RxSwift */,
+				ABEFBD4B2AD82BAB00AEBD88 /* RxBlocking */,
+			);
+			productName = "Premier-League-Match-Grinta-iOS-Task";
+			productReference = ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABEFBD192AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFBD312AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-TaskTests" */;
+			buildPhases = (
+				ABEFBD162AD82B3900AEBD88 /* Sources */,
+				ABEFBD172AD82B3900AEBD88 /* Frameworks */,
+				ABEFBD182AD82B3900AEBD88 /* Resources */,
+				ABEFBD502AD82BB200AEBD88 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABEFBD1C2AD82B3900AEBD88 /* PBXTargetDependency */,
+			);
+			name = "Premier-League-Match-Grinta-iOS-TaskTests";
+			packageProductDependencies = (
+				ABEFBD4D2AD82BB100AEBD88 /* RxTest-Dynamic */,
+			);
+			productName = "Premier-League-Match-Grinta-iOS-TaskTests";
+			productReference = ABEFBD1A2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABEFBD232AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFBD342AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-TaskUITests" */;
+			buildPhases = (
+				ABEFBD202AD82B3900AEBD88 /* Sources */,
+				ABEFBD212AD82B3900AEBD88 /* Frameworks */,
+				ABEFBD222AD82B3900AEBD88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABEFBD262AD82B3900AEBD88 /* PBXTargetDependency */,
+			);
+			name = "Premier-League-Match-Grinta-iOS-TaskUITests";
+			productName = "Premier-League-Match-Grinta-iOS-TaskUITests";
+			productReference = ABEFBD242AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABEFBCFC2AD82B3800AEBD88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					ABEFBD032AD82B3800AEBD88 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					ABEFBD192AD82B3900AEBD88 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = ABEFBD032AD82B3800AEBD88;
+					};
+					ABEFBD232AD82B3900AEBD88 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = ABEFBD032AD82B3800AEBD88;
+					};
+				};
+			};
+			buildConfigurationList = ABEFBCFF2AD82B3800AEBD88 /* Build configuration list for PBXProject "Premier-League-Match-Grinta-iOS-Task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABEFBCFB2AD82B3800AEBD88;
+			packageReferences = (
+				ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
+				ABEFBD3D2AD82B7F00AEBD88 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ABEFBD402AD82B8700AEBD88 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = ABEFBD052AD82B3800AEBD88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABEFBD032AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */,
+				ABEFBD192AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests */,
+				ABEFBD232AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABEFBD022AD82B3800AEBD88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD142AD82B3900AEBD88 /* LaunchScreen.storyboard in Resources */,
+				ABEFBD112AD82B3900AEBD88 /* Assets.xcassets in Resources */,
+				ABEFBD0F2AD82B3800AEBD88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD182AD82B3900AEBD88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD222AD82B3900AEBD88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABEFBD002AD82B3800AEBD88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */,
+				ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */,
+				ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD162AD82B3900AEBD88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD1F2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFBD202AD82B3900AEBD88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFBD2B2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITestsLaunchTests.swift in Sources */,
+				ABEFBD292AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABEFBD1C2AD82B3900AEBD88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABEFBD032AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */;
+			targetProxy = ABEFBD1B2AD82B3900AEBD88 /* PBXContainerItemProxy */;
+		};
+		ABEFBD262AD82B3900AEBD88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABEFBD032AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task */;
+			targetProxy = ABEFBD252AD82B3900AEBD88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABEFBD0D2AD82B3800AEBD88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEFBD0E2AD82B3800AEBD88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABEFBD122AD82B3900AEBD88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEFBD132AD82B3900AEBD88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABEFBD2C2AD82B3900AEBD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABEFBD2D2AD82B3900AEBD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABEFBD2F2AD82B3900AEBD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Premier-League-Match-Grinta-iOS-Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABEFBD302AD82B3900AEBD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Premier-League-Match-Grinta-iOS-Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABEFBD322AD82B3900AEBD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Premier-League-Match-Grinta-iOS-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Premier-League-Match-Grinta-iOS-Task";
+			};
+			name = Debug;
+		};
+		ABEFBD332AD82B3900AEBD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Premier-League-Match-Grinta-iOS-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Premier-League-Match-Grinta-iOS-Task";
+			};
+			name = Release;
+		};
+		ABEFBD352AD82B3900AEBD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Premier-League-Match-Grinta-iOS-Task";
+			};
+			name = Debug;
+		};
+		ABEFBD362AD82B3900AEBD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8FDFK3WX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salah.12488.Premier-League-Match-Grinta-iOS-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Premier-League-Match-Grinta-iOS-Task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABEFBCFF2AD82B3800AEBD88 /* Build configuration list for PBXProject "Premier-League-Match-Grinta-iOS-Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFBD2C2AD82B3900AEBD88 /* Debug */,
+				ABEFBD2D2AD82B3900AEBD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABEFBD2E2AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFBD2F2AD82B3900AEBD88 /* Debug */,
+				ABEFBD302AD82B3900AEBD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABEFBD312AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFBD322AD82B3900AEBD88 /* Debug */,
+				ABEFBD332AD82B3900AEBD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABEFBD342AD82B3900AEBD88 /* Build configuration list for PBXNativeTarget "Premier-League-Match-Grinta-iOS-TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFBD352AD82B3900AEBD88 /* Debug */,
+				ABEFBD362AD82B3900AEBD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/idrougge/OptionallyDecodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		ABEFBD3D2AD82B7F00AEBD88 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		ABEFBD402AD82B8700AEBD88 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+		ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
+			productName = OptionallyDecodable;
+		};
+		ABEFBD3E2AD82B7F00AEBD88 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD3D2AD82B7F00AEBD88 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ABEFBD412AD82B8700AEBD88 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD402AD82B8700AEBD88 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		ABEFBD452AD82B9E00AEBD88 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ABEFBD472AD82BA100AEBD88 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		ABEFBD492AD82BA600AEBD88 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		ABEFBD4B2AD82BAB00AEBD88 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		ABEFBD4D2AD82BB100AEBD88 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = ABEFBCFC2AD82B3800AEBD88 /* Project object */;
+}
