@@ -106,23 +106,5 @@ extension ViewController {
                 .disposed(by: disposeBag)
     }
 }
-//extension ViewController: UITableViewDataSource, UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 10
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellsResuable.MatchTVC, for: indexPath) as! MatchTableViewCell
-//        cell.homeTeamNameLabel.text = "Salah"
-//        cell.awayTeamNameLabel.text = "Mohamed"
-////        if let url = URL(string: (gamesArray?[indexPath.row].thumbnail)! ) {
-//////            cell.gameImage.
-////        }
-////        cell.gameLabel.text = gamesArray?[indexPath.row].title ?? "Unknown"
-//        return cell
-//    }
-//    
-//    
-//}
 
 

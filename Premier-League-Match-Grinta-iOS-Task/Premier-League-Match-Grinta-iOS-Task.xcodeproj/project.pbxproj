@@ -10,6 +10,7 @@
 		ABC621532AD83CE500ABD918 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621522AD83CE500ABD918 /* MatchViewModel.swift */; };
 		ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */; };
 		ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621582AD8590B00ABD918 /* RxDataSources */; };
+		ABC6215C2AD879A700ABD918 /* FavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */; };
 		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
 		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
 		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		ABC621522AD83CE500ABD918 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
 		ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABC6215A2AD8798600ABD918 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		ABEFBCFB2AD82B3800AEBD88 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 				ABEFBD382AD82B4E00AEBD88 /* ViewModel */,
 				ABEFBD392AD82B5200AEBD88 /* View */,
 				ABEFBD542AD82C5C00AEBD88 /* Networking */,
+				ABC6215A2AD8798600ABD918 /* DataManager */,
 				ABEFBD572AD82C8100AEBD88 /* Resources */,
 				ABEFBD102AD82B3900AEBD88 /* Assets.xcassets */,
 				ABEFBD122AD82B3900AEBD88 /* LaunchScreen.storyboard */,
@@ -371,6 +382,7 @@
 				ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				ABC621542AD846CC00ABD918 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 				ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				ABC6215D2AD879F700ABD918 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = ABEFBD052AD82B3800AEBD88 /* Products */;
 			projectDirPath = "";
@@ -418,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEFBD652AD835B200AEBD88 /* RadioButton.swift in Sources */,
+				ABC6215C2AD879A700ABD918 /* FavouritesManager.swift in Sources */,
 				ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */,
 				ABC621532AD83CE500ABD918 /* MatchViewModel.swift in Sources */,
 				ABEFBD532AD82C0D00AEBD88 /* Matches.swift in Sources */,
@@ -789,6 +802,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.2;
+			};
+		};
+		ABC6215D2AD879F700ABD918 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 		ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {

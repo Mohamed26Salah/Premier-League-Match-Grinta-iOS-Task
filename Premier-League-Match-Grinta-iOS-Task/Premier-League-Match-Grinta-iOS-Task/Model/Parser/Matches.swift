@@ -8,6 +8,7 @@
 import Foundation
 import OptionallyDecodable
 import RxDataSources
+
 // MARK: - Matches
 struct Matches: Codable {
     var filters: Filters
@@ -26,9 +27,9 @@ struct Matches: Codable {
 // MARK: - Competition
 struct Competition: Codable {
     var id: Int
-    var name: CompetitionName?
-    var code: CompetitionCode?
-    var type: CompetitionType?
+    var name: String?
+    var code: String?
+    var type: String?
     var emblem: String
 
     enum CodingKeys: String, CodingKey {
@@ -38,18 +39,6 @@ struct Competition: Codable {
         case type = "type"
         case emblem = "emblem"
     }
-}
-
-enum CompetitionCode: String, Codable {
-    case pl = "PL"
-}
-
-enum CompetitionName: String, Codable {
-    case premierLeague = "Premier League"
-}
-
-enum CompetitionType: String, Codable {
-    case league = "LEAGUE"
 }
 
 // MARK: - Filters
@@ -70,13 +59,13 @@ struct Match: Codable {
     var utcDate: String
     var status: Status?
     var matchday: Int
-    var stage: Stage?
+    var stage: String?
     var group: JSONNull?
     var lastUpdated: String
     var homeTeam: Team
     var awayTeam: Team
     var score: Score
-    var odds: Odds
+//    var odds: Odds
     var referees: [Referee]
 
     enum CodingKeys: String, CodingKey {
@@ -93,7 +82,7 @@ struct Match: Codable {
         case homeTeam = "homeTeam"
         case awayTeam = "awayTeam"
         case score = "score"
-        case odds = "odds"
+//        case odds = "odds"
         case referees = "referees"
     }
 }
@@ -101,8 +90,8 @@ struct Match: Codable {
 // MARK: - Area
 struct Area: Codable {
     var id: Int
-    var name: NationalityEnum?
-    var code: AreaCode?
+    var name: String?
+    var code: String?
     var flag: String
 
     enum CodingKeys: String, CodingKey {
@@ -111,15 +100,6 @@ struct Area: Codable {
         case code = "code"
         case flag = "flag"
     }
-}
-
-enum AreaCode: String, Codable {
-    case eng = "ENG"
-}
-
-enum NationalityEnum: String, Codable {
-    case australia = "Australia"
-    case england = "England"
 }
 
 // MARK: - Team
@@ -139,94 +119,25 @@ struct Team: Codable {
     }
 }
 
-//enum AwayTeamName: String, Codable {
-//    case afcBournemouth = "AFC Bournemouth"
-//    case arsenalFC = "Arsenal FC"
-//    case astonVillaFC = "Aston Villa FC"
-//    case brentfordFC = "Brentford FC"
-//    case brightonHoveAlbionFC = "Brighton & Hove Albion FC"
-//    case burnleyFC = "Burnley FC"
-//    case chelseaFC = "Chelsea FC"
-//    case crystalPalaceFC = "Crystal Palace FC"
-//    case evertonFC = "Everton FC"
-//    case fulhamFC = "Fulham FC"
-//    case liverpoolFC = "Liverpool FC"
-//    case lutonTownFC = "Luton Town FC"
-//    case manchesterCityFC = "Manchester City FC"
-//    case manchesterUnitedFC = "Manchester United FC"
-//    case newcastleUnitedFC = "Newcastle United FC"
-//    case nottinghamForestFC = "Nottingham Forest FC"
-//    case sheffieldUnitedFC = "Sheffield United FC"
-//    case tottenhamHotspurFC = "Tottenham Hotspur FC"
-//    case westHamUnitedFC = "West Ham United FC"
-//    case wolverhamptonWanderersFC = "Wolverhampton Wanderers FC"
+// MARK: - Odds
+//struct Odds: Codable {
+//    var msg: Msg?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case msg = "msg"
+//    }
 //}
 //
-//enum ShortName: String, Codable {
-//    case arsenal = "Arsenal"
-//    case astonVilla = "Aston Villa"
-//    case bournemouth = "Bournemouth"
-//    case brentford = "Brentford"
-//    case brightonHove = "Brighton Hove"
-//    case burnley = "Burnley"
-//    case chelsea = "Chelsea"
-//    case crystalPalace = "Crystal Palace"
-//    case everton = "Everton"
-//    case fulham = "Fulham"
-//    case liverpool = "Liverpool"
-//    case lutonTown = "Luton Town"
-//    case manCity = "Man City"
-//    case manUnited = "Man United"
-//    case newcastle = "Newcastle"
-//    case nottingham = "Nottingham"
-//    case sheffieldUtd = "Sheffield Utd"
-//    case tottenham = "Tottenham"
-//    case westHam = "West Ham"
-//    case wolverhampton = "Wolverhampton"
+//enum Msg: String, Codable {
+//    case activateOddsPackageInUserPanelToRetrieveOdds = "Activate Odds-Package in User-Panel to retrieve odds."
 //}
-
-//enum TLA: String, Codable {
-//    case ars = "ARS"
-//    case avl = "AVL"
-//    case bha = "BHA"
-//    case bou = "BOU"
-//    case bre = "BRE"
-//    case bur = "BUR"
-//    case che = "CHE"
-//    case cry = "CRY"
-//    case eve = "EVE"
-//    case ful = "FUL"
-//    case liv = "LIV"
-//    case lut = "LUT"
-//    case mci = "MCI"
-//    case mun = "MUN"
-//    case new = "NEW"
-//    case not = "NOT"
-//    case she = "SHE"
-//    case tot = "TOT"
-//    case whu = "WHU"
-//    case wol = "WOL"
-//}
-
-// MARK: - Odds
-struct Odds: Codable {
-    var msg: Msg?
-
-    enum CodingKeys: String, CodingKey {
-        case msg = "msg"
-    }
-}
-
-enum Msg: String, Codable {
-    case activateOddsPackageInUserPanelToRetrieveOdds = "Activate Odds-Package in User-Panel to retrieve odds."
-}
 
 // MARK: - Referee
 struct Referee: Codable {
     var id: Int
     var name: String
-    var type: RefereeType?
-    var nationality: NationalityEnum?
+    var type: String?
+    var nationality: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -234,10 +145,6 @@ struct Referee: Codable {
         case type = "type"
         case nationality = "nationality"
     }
-}
-
-enum RefereeType: String, Codable {
-    case referee = "REFEREE"
 }
 
 // MARK: - Score
@@ -293,9 +200,9 @@ struct Season: Codable {
     }
 }
 
-enum Stage: String, Codable {
-    case regularSeason = "REGULAR_SEASON"
-}
+//enum Stage: String, Codable {
+//    case regularSeason = "REGULAR_SEASON"
+//}
 
 enum Status: String, Codable {
     case finished = "FINISHED"

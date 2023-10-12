@@ -63,7 +63,8 @@ extension MatchViewModel {
 
         if let date = dateFormatter.date(from: dateString) {
             dateFormatter.timeZone = timeZone
-            dateFormatter.dateFormat = "h:mm a"
+//            dateFormatter.dateFormat = "h:mm a"
+            dateFormatter.dateFormat = "HH:mm"
             return dateFormatter.string(from: date)
         }
 
