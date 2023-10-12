@@ -125,9 +125,9 @@ enum NationalityEnum: String, Codable {
 // MARK: - Team
 struct Team: Codable {
     var id: Int
-    var name: AwayTeamName?
-    var shortName: ShortName?
-    var tla: TLA?
+    var name: String?
+    var shortName: String?
+    var tla: String?
     var crest: String
 
     enum CodingKeys: String, CodingKey {
@@ -139,74 +139,74 @@ struct Team: Codable {
     }
 }
 
-enum AwayTeamName: String, Codable {
-    case afcBournemouth = "AFC Bournemouth"
-    case arsenalFC = "Arsenal FC"
-    case astonVillaFC = "Aston Villa FC"
-    case brentfordFC = "Brentford FC"
-    case brightonHoveAlbionFC = "Brighton & Hove Albion FC"
-    case burnleyFC = "Burnley FC"
-    case chelseaFC = "Chelsea FC"
-    case crystalPalaceFC = "Crystal Palace FC"
-    case evertonFC = "Everton FC"
-    case fulhamFC = "Fulham FC"
-    case liverpoolFC = "Liverpool FC"
-    case lutonTownFC = "Luton Town FC"
-    case manchesterCityFC = "Manchester City FC"
-    case manchesterUnitedFC = "Manchester United FC"
-    case newcastleUnitedFC = "Newcastle United FC"
-    case nottinghamForestFC = "Nottingham Forest FC"
-    case sheffieldUnitedFC = "Sheffield United FC"
-    case tottenhamHotspurFC = "Tottenham Hotspur FC"
-    case westHamUnitedFC = "West Ham United FC"
-    case wolverhamptonWanderersFC = "Wolverhampton Wanderers FC"
-}
+//enum AwayTeamName: String, Codable {
+//    case afcBournemouth = "AFC Bournemouth"
+//    case arsenalFC = "Arsenal FC"
+//    case astonVillaFC = "Aston Villa FC"
+//    case brentfordFC = "Brentford FC"
+//    case brightonHoveAlbionFC = "Brighton & Hove Albion FC"
+//    case burnleyFC = "Burnley FC"
+//    case chelseaFC = "Chelsea FC"
+//    case crystalPalaceFC = "Crystal Palace FC"
+//    case evertonFC = "Everton FC"
+//    case fulhamFC = "Fulham FC"
+//    case liverpoolFC = "Liverpool FC"
+//    case lutonTownFC = "Luton Town FC"
+//    case manchesterCityFC = "Manchester City FC"
+//    case manchesterUnitedFC = "Manchester United FC"
+//    case newcastleUnitedFC = "Newcastle United FC"
+//    case nottinghamForestFC = "Nottingham Forest FC"
+//    case sheffieldUnitedFC = "Sheffield United FC"
+//    case tottenhamHotspurFC = "Tottenham Hotspur FC"
+//    case westHamUnitedFC = "West Ham United FC"
+//    case wolverhamptonWanderersFC = "Wolverhampton Wanderers FC"
+//}
+//
+//enum ShortName: String, Codable {
+//    case arsenal = "Arsenal"
+//    case astonVilla = "Aston Villa"
+//    case bournemouth = "Bournemouth"
+//    case brentford = "Brentford"
+//    case brightonHove = "Brighton Hove"
+//    case burnley = "Burnley"
+//    case chelsea = "Chelsea"
+//    case crystalPalace = "Crystal Palace"
+//    case everton = "Everton"
+//    case fulham = "Fulham"
+//    case liverpool = "Liverpool"
+//    case lutonTown = "Luton Town"
+//    case manCity = "Man City"
+//    case manUnited = "Man United"
+//    case newcastle = "Newcastle"
+//    case nottingham = "Nottingham"
+//    case sheffieldUtd = "Sheffield Utd"
+//    case tottenham = "Tottenham"
+//    case westHam = "West Ham"
+//    case wolverhampton = "Wolverhampton"
+//}
 
-enum ShortName: String, Codable {
-    case arsenal = "Arsenal"
-    case astonVilla = "Aston Villa"
-    case bournemouth = "Bournemouth"
-    case brentford = "Brentford"
-    case brightonHove = "Brighton Hove"
-    case burnley = "Burnley"
-    case chelsea = "Chelsea"
-    case crystalPalace = "Crystal Palace"
-    case everton = "Everton"
-    case fulham = "Fulham"
-    case liverpool = "Liverpool"
-    case lutonTown = "Luton Town"
-    case manCity = "Man City"
-    case manUnited = "Man United"
-    case newcastle = "Newcastle"
-    case nottingham = "Nottingham"
-    case sheffieldUtd = "Sheffield Utd"
-    case tottenham = "Tottenham"
-    case westHam = "West Ham"
-    case wolverhampton = "Wolverhampton"
-}
-
-enum TLA: String, Codable {
-    case ars = "ARS"
-    case avl = "AVL"
-    case bha = "BHA"
-    case bou = "BOU"
-    case bre = "BRE"
-    case bur = "BUR"
-    case che = "CHE"
-    case cry = "CRY"
-    case eve = "EVE"
-    case ful = "FUL"
-    case liv = "LIV"
-    case lut = "LUT"
-    case mci = "MCI"
-    case mun = "MUN"
-    case new = "NEW"
-    case not = "NOT"
-    case she = "SHE"
-    case tot = "TOT"
-    case whu = "WHU"
-    case wol = "WOL"
-}
+//enum TLA: String, Codable {
+//    case ars = "ARS"
+//    case avl = "AVL"
+//    case bha = "BHA"
+//    case bou = "BOU"
+//    case bre = "BRE"
+//    case bur = "BUR"
+//    case che = "CHE"
+//    case cry = "CRY"
+//    case eve = "EVE"
+//    case ful = "FUL"
+//    case liv = "LIV"
+//    case lut = "LUT"
+//    case mci = "MCI"
+//    case mun = "MUN"
+//    case new = "NEW"
+//    case not = "NOT"
+//    case she = "SHE"
+//    case tot = "TOT"
+//    case whu = "WHU"
+//    case wol = "WOL"
+//}
 
 // MARK: - Odds
 struct Odds: Codable {
