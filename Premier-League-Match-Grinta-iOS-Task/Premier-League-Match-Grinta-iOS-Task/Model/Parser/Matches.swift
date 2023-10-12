@@ -7,7 +7,7 @@
 
 import Foundation
 import OptionallyDecodable
-
+import RxDataSources
 // MARK: - Matches
 struct Matches: Codable {
     var filters: Filters
@@ -345,5 +345,12 @@ class JSONNull: Codable, Hashable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()
+    }
+}
+extension Match: IdentifiableType, Equatable {
+    var identity: Int { return id }
+    
+    static func ==(lhs: Match, rhs: Match) -> Bool {
+        return lhs.id == rhs.id
     }
 }

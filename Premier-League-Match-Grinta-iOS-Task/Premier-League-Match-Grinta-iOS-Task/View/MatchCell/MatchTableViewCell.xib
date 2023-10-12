@@ -15,14 +15,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MatchTableViewCell" rowHeight="130" id="KGk-i7-Jjw" customClass="MatchTableViewCell" customModule="Premier_League_Match_Grinta_iOS_Task" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="395" height="130"/>
+            <rect key="frame" x="0.0" y="0.0" width="466" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="395" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="466" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-xf-wzH" customClass="RadioButton" customModule="Premier_League_Match_Grinta_iOS_Task" customModuleProvider="target">
-                        <rect key="frame" x="320" y="5" width="70" height="30"/>
+                        <rect key="frame" x="320" y="5" width="141" height="30"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="UnSaved"/>
                         <connections>
@@ -30,13 +30,13 @@
                         </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nKU-jG-KIN">
-                        <rect key="frame" x="58" y="19" width="279" height="92"/>
+                        <rect key="frame" x="93.333333333333343" y="19" width="279.33333333333326" height="92"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-Y8-7Ci">
                                 <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="92"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3R-fw-W5a">
-                                        <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="25.333333333333343" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gRr-jE-uWy"/>
                                             <constraint firstAttribute="width" constant="50" id="rOE-fi-S27"/>
@@ -55,13 +55,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7L-lc-p4M">
-                                <rect key="frame" x="121.33333333333336" y="0.0" width="36.666666666666671" height="92"/>
+                                <rect key="frame" x="121.33333333333333" y="0.0" width="36.666666666666671" height="92"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="77q-li-IKM">
-                                <rect key="frame" x="179" y="0.0" width="100" height="92"/>
+                                <rect key="frame" x="179" y="0.0" width="100.33333333333331" height="92"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLZ-gI-fmx">
                                         <rect key="frame" x="25" y="0.0" width="50" height="50"/>
@@ -71,7 +71,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machnester City" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feV-81-Z5J">
-                                        <rect key="frame" x="0.0" y="52" width="100" height="40"/>
+                                        <rect key="frame" x="0.0" y="52" width="100.33333333333333" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100.33" id="IZ5-OK-qNI"/>
                                             <constraint firstAttribute="height" constant="40" id="b3n-Zn-2bc"/>
@@ -103,7 +103,7 @@
                 <outlet property="saveToFavouritesButton" destination="Udb-xf-wzH" id="DKz-Nz-ucb"/>
                 <outlet property="statusLabel" destination="T7L-lc-p4M" id="2KZ-AI-SVp"/>
             </connections>
-            <point key="canvasLocation" x="9.9236641221374047" y="19.014084507042256"/>
+            <point key="canvasLocation" x="64.122137404580144" y="19.014084507042256"/>
         </tableViewCell>
     </objects>
     <resources>

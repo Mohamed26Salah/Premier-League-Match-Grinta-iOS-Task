@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ABC621532AD83CE500ABD918 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621522AD83CE500ABD918 /* MatchViewModel.swift */; };
 		ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */; };
+		ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621582AD8590B00ABD918 /* RxDataSources */; };
 		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
 		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
 		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
@@ -104,6 +105,7 @@
 				ABEFBD3C2AD82B7800AEBD88 /* OptionallyDecodable in Frameworks */,
 				ABEFBD462AD82B9E00AEBD88 /* RxCocoa in Frameworks */,
 				ABEFBD3F2AD82B7F00AEBD88 /* Alamofire in Frameworks */,
+				ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */,
 				ABEFBD4C2AD82BAB00AEBD88 /* RxBlocking in Frameworks */,
 				ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */,
 			);
@@ -284,6 +286,7 @@
 				ABEFBD492AD82BA600AEBD88 /* RxSwift */,
 				ABEFBD4B2AD82BAB00AEBD88 /* RxBlocking */,
 				ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */,
+				ABC621582AD8590B00ABD918 /* RxDataSources */,
 			);
 			productName = "Premier-League-Match-Grinta-iOS-Task";
 			productReference = ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */;
@@ -367,6 +370,7 @@
 				ABEFBD402AD82B8700AEBD88 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				ABC621542AD846CC00ABD918 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
+				ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = ABEFBD052AD82B3800AEBD88 /* Products */;
 			projectDirPath = "";
@@ -779,6 +783,14 @@
 				minimumVersion = 1.7.0;
 			};
 		};
+		ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/idrougge/OptionallyDecodable";
@@ -818,6 +830,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ABC621542AD846CC00ABD918 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
 			productName = SDWebImageSVGCoder;
+		};
+		ABC621582AD8590B00ABD918 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 		ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */ = {
 			isa = XCSwiftPackageProductDependency;
