@@ -48,7 +48,7 @@ class APIManager: APIClientProtocol {
         var stringValue: String {
             switch self {
             case .matches(let competitionCode):
-                return Constants.Links.baseUrl + "competitions/\(competitionCode)/matches"
+                return SecurityConstants.Links.baseUrl + "competitions/\(competitionCode)/matches"
             }
         }
 

@@ -8,7 +8,7 @@
 import Foundation
 struct SecurityConstants {
     struct Links {
-        static let baseUrl = ""
-        static let apiKey = ""
+        static let baseUrl = "https://api.football-data.org/v4/"
+        static let apiKey = "41ce2d6eda654fb99f78b72c563dd9e6"
     }
 }
