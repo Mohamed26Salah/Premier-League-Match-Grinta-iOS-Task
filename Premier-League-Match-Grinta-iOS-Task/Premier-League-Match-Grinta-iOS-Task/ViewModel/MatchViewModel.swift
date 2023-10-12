@@ -20,6 +20,7 @@ class MatchViewModel {
     var matchesModel: Matches?
     //out
     var matchesList = PublishRelay<[Match]>.init()
+    var favoruiteMatchesList = BehaviorRelay<[FavouriteMatch]>(value: FavouritesManager.shared().getAllFavoriteMatches())
     var showLoading = BehaviorRelay<Bool>(value: false)
     var errorSubject = PublishSubject<Error>()
     private let disposeBag = DisposeBag()
@@ -99,4 +100,10 @@ extension MatchViewModel {
     }
 
 
+}
+//MARK: - DataManager Helper Functions
+extension MatchViewModel {
+    func createFavouriteObject(match: AnimatableSectionModel<String, Match>.Item) -> FavouriteMatch {
+        return FavouriteMatch(id: match.id, homeTeamImage: match.homeTeam.crest, awayTeamImage: match.awayTeam.crest, homeTeamName: match.homeTeam.name ?? "N/A", awayTeamName: match.awayTeam.name ?? "N/A", utcDate: match.utcDate, matchday: match.matchday, winner: match.score.winner?.rawValue ?? "N/A", fullTimeScoreHome: match.score.fullTime.home, fullTimeScoreAway: match.score.fullTime.away, competitionCode: match.competition.code, competitionName: match.competition.name)
+    }
 }

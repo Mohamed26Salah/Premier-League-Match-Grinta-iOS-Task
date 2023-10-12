@@ -150,7 +150,7 @@ struct Referee: Codable {
 // MARK: - Score
 struct Score: Codable {
     var winner: Winner?
-    var duration: Duration?
+    var duration: String?
     var fullTime: Time
     var halfTime: Time
 
@@ -162,9 +162,9 @@ struct Score: Codable {
     }
 }
 
-enum Duration: String, Codable {
-    case regular = "REGULAR"
-}
+//enum Duration: String, Codable {
+//    case regular = "REGULAR"
+//}
 
 // MARK: - Time
 struct Time: Codable {

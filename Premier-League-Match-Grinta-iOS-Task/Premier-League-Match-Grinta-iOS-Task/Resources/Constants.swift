@@ -23,6 +23,8 @@ struct Constants {
         static let CardLiveImage = "Card Live"
         static let savedImage = "Saved"
         static let UnsavedImage = "UnSaved"
+        static let heartImage = "heart"
+        static let heartFilledImage = "heartFilled"
     }
     struct UserDefaults {
         static let hasSeenOnboarding = "hasSeenOnboarding"

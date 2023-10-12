@@ -10,10 +10,13 @@ import RxSwift
 import RxCocoa
 import SDWebImage
 import RxDataSources
+import RealmSwift
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var matchTableView: UITableView!
+    @IBOutlet weak var segmentOutlet: UISegmentedControl!
+    
     let disposeBag = DisposeBag()
     let matchVM = MatchViewModel()
        override func viewDidLoad() {
@@ -21,10 +24,19 @@ class ViewController: UIViewController {
            matchTableView.register(UINib(nibName: Constants.cellsResuable.MatchTVC, bundle: nil), forCellReuseIdentifier: Constants.cellsResuable.MatchTVC)
            matchVM.getMatches()
            bindTableView()
-           // Do any additional setup after loading the view.
        }
 
-
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+           print("PL")
+        case 1:
+            print("Favoruites")
+        default:
+            break
+        }
+    }
+    
 }
 //MARK: - Rx Functions
 extension ViewController {
@@ -39,7 +51,6 @@ extension ViewController {
                     cell.homeTeamImage.sd_setImage(with: url, placeholderImage: .cardLive)
                 }
                 if let url = URL(string: match.awayTeam.crest) {
-//                        cell.awayTeamImage.sd_setImage(with: url)
                     cell.awayTeamImage.sd_setImage(with: url, placeholderImage: .cardLive)
                 }
                 cell.homeTeamNameLabel.text = match.homeTeam.name
@@ -53,8 +64,15 @@ extension ViewController {
                     cell.statusLabel.text = homeScore + "-" + awayScore
                     cell.timeZoneLabel.text = ""
                 }
+                cell.saveToFavouritesButton.isChecked = FavouritesManager.shared().isMatchFavorited(id: match.id)
+                let favouriteMatch = matchVM.createFavouriteObject(match: match)
                 cell.onFavButtonTapped = {
-                    print("Tappped")
+                    if cell.saveToFavouritesButton.isChecked {
+                        FavouritesManager.shared().addToFavorites(match: favouriteMatch)
+                    } else {
+                        FavouritesManager.shared().removeFromFavorites(match: favouriteMatch)
+                    }
+                    self.matchVM.favoruiteMatchesList.accept(FavouritesManager.shared().getAllFavoriteMatches())
                 }
                 return cell
             },
@@ -74,36 +92,6 @@ extension ViewController {
             }
             .bind(to: matchTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-    }
-    func showRecipesData() {
-        matchVM.matchesList
-            .bind(to: matchTableView
-                .rx
-                .items(cellIdentifier: Constants.cellsResuable.MatchTVC, cellType: MatchTableViewCell.self)) { [weak self] (tv, match, cell) in
-                    guard let self = self else {
-                        return
-                    }
-                    if let url = URL(string: match.homeTeam.crest) {
-                        cell.homeTeamImage.sd_setImage(with: url, placeholderImage: .cardLive)
-                    }
-                    if let url = URL(string: match.awayTeam.crest) {
-//                        cell.awayTeamImage.sd_setImage(with: url)
-                        cell.awayTeamImage.sd_setImage(with: url, placeholderImage: .cardLive)
-                    }
-                    cell.homeTeamNameLabel.text = match.homeTeam.name
-                    cell.awayTeamNameLabel.text = match.awayTeam.name
-                    if match.score.winner == nil {
-                        cell.statusLabel.text = matchVM.formatDate(dateString: match.utcDate) ?? "N/A"
-                    } else {
-                        let homeScore = String(match.score.fullTime.home ?? 0)
-                        let awayScore = String(match.score.fullTime.away ?? 0)
-                        cell.statusLabel.text = homeScore + "-" + awayScore
-                    }
-                    cell.onFavButtonTapped = {
-                        print("Tappped")
-                    }
-                }
-                .disposed(by: disposeBag)
     }
 }
 

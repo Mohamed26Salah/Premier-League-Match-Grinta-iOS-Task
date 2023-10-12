@@ -11,6 +11,8 @@
 		ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */; };
 		ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621582AD8590B00ABD918 /* RxDataSources */; };
 		ABC6215C2AD879A700ABD918 /* FavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */; };
+		ABC6215F2AD87C0700ABD918 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6215E2AD87C0700ABD918 /* RealmSwift */; };
+		ABC621612AD87F9B00ABD918 /* favouriteMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */; };
 		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
 		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
 		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
@@ -73,6 +75,7 @@
 /* Begin PBXFileReference section */
 		ABC621522AD83CE500ABD918 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
+		ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMatch.swift; sourceTree = "<group>"; };
 		ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 				ABEFBD3F2AD82B7F00AEBD88 /* Alamofire in Frameworks */,
 				ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */,
 				ABEFBD4C2AD82BAB00AEBD88 /* RxBlocking in Frameworks */,
+				ABC6215F2AD87C0700ABD918 /* RealmSwift in Frameworks */,
 				ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				ABEFBD512AD82C0200AEBD88 /* Parser */,
+				ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				ABEFBD4B2AD82BAB00AEBD88 /* RxBlocking */,
 				ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */,
 				ABC621582AD8590B00ABD918 /* RxDataSources */,
+				ABC6215E2AD87C0700ABD918 /* RealmSwift */,
 			);
 			productName = "Premier-League-Match-Grinta-iOS-Task";
 			productReference = ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */;
@@ -430,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEFBD652AD835B200AEBD88 /* RadioButton.swift in Sources */,
+				ABC621612AD87F9B00ABD918 /* favouriteMatch.swift in Sources */,
 				ABC6215C2AD879A700ABD918 /* FavouritesManager.swift in Sources */,
 				ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */,
 				ABC621532AD83CE500ABD918 /* MatchViewModel.swift in Sources */,
@@ -856,6 +863,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		ABC6215E2AD87C0700ABD918 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC6215D2AD879F700ABD918 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */ = {
 			isa = XCSwiftPackageProductDependency;

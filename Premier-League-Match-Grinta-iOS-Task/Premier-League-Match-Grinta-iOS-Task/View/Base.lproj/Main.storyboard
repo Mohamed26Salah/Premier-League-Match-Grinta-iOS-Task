@@ -24,6 +24,9 @@
                                 </segments>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="oBT-ql-1Nv"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-HS-tTS">
                                 <rect key="frame" x="0.0" y="124" width="393" height="694"/>
@@ -44,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="matchTableView" destination="Rwj-HS-tTS" id="5h2-PE-FKJ"/>
+                        <outlet property="segmentOutlet" destination="7OZ-3M-nje" id="cc9-OY-cvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

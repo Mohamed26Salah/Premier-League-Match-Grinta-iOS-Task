@@ -21,14 +21,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="466" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-xf-wzH" customClass="RadioButton" customModule="Premier_League_Match_Grinta_iOS_Task" customModuleProvider="target">
-                        <rect key="frame" x="320" y="5" width="141" height="30"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="UnSaved"/>
-                        <connections>
-                            <action selector="saveToFavouritesButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="REc-5H-eRE"/>
-                        </connections>
-                    </button>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nKU-jG-KIN">
                         <rect key="frame" x="61.666666666666657" y="19" width="342.66666666666674" height="92"/>
                         <subviews>
@@ -95,14 +87,27 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-xf-wzH" customClass="RadioButton" customModule="Premier_League_Match_Grinta_iOS_Task" customModuleProvider="target">
+                        <rect key="frame" x="412" y="15" width="35" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="JF2-UE-dZU"/>
+                            <constraint firstAttribute="height" constant="30" id="WJ9-BV-5kY"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="UnSaved">
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="saveToFavouritesButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="REc-5H-eRE"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Udb-xf-wzH" secondAttribute="trailing" constant="5" id="2IJ-gC-tVu"/>
                     <constraint firstItem="nKU-jG-KIN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Apl-Jh-Wr9"/>
-                    <constraint firstItem="Udb-xf-wzH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="320" id="Bkh-Aa-IGv"/>
-                    <constraint firstAttribute="bottom" secondItem="Udb-xf-wzH" secondAttribute="bottom" constant="95" id="Drk-ct-MfY"/>
-                    <constraint firstItem="Udb-xf-wzH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="HhN-qg-UgF"/>
+                    <constraint firstAttribute="bottom" secondItem="Udb-xf-wzH" secondAttribute="bottom" constant="85" id="BKC-Wa-yhc"/>
+                    <constraint firstAttribute="trailing" secondItem="Udb-xf-wzH" secondAttribute="trailing" constant="19" id="HJW-HA-8oj"/>
                     <constraint firstItem="nKU-jG-KIN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SMe-45-e3b"/>
+                    <constraint firstItem="Udb-xf-wzH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="X8S-du-dg1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

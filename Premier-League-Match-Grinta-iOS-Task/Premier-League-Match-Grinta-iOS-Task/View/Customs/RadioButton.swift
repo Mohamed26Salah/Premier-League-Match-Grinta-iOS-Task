@@ -37,7 +37,7 @@ class RadioButton: UIButton {
     
     @objc func buttonTapped() {
         isChecked = !isChecked
-        feedbackGenerator.impactOccurred()
+//        feedbackGenerator.impactOccurred()
         
         // Add a spring animation for a stronger effect
         let springAnimation = CASpringAnimation(keyPath: "transform.scale")
