@@ -46,10 +46,12 @@ extension ViewController {
                 cell.awayTeamNameLabel.text = match.awayTeam.name
                 if match.score.winner == nil {
                     cell.statusLabel.text = matchVM.formatTime(dateString: match.utcDate) ?? "N/A"
+                    cell.timeZoneLabel.text = TimeZone.current.identifier
                 } else {
                     let homeScore = String(match.score.fullTime.home ?? 0)
                     let awayScore = String(match.score.fullTime.away ?? 0)
                     cell.statusLabel.text = homeScore + "-" + awayScore
+                    cell.timeZoneLabel.text = ""
                 }
                 cell.onFavButtonTapped = {
                     print("Tappped")

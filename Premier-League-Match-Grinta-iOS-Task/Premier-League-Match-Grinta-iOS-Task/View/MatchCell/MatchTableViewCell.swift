@@ -14,6 +14,7 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var timeZoneLabel: UILabel!
     @IBOutlet weak var saveToFavouritesButton: RadioButton!
     var onFavButtonTapped: (() -> Void)?
     
