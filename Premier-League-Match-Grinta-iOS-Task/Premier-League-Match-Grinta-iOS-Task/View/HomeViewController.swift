@@ -12,7 +12,7 @@ import SDWebImage
 import RxDataSources
 import RealmSwift
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var matchTableView: UITableView!
     @IBOutlet weak var segmentOutlet: UISegmentedControl!
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
        }
 }
 //MARK: - Rx Functions
-extension ViewController {
+extension HomeViewController {
     func bindTableView() {
         let dataSource = RxTableViewSectionedAnimatedDataSource<MatchSectionModel>(
             configureCell: { [weak self]  dataSource, tableView, indexPath, match in
