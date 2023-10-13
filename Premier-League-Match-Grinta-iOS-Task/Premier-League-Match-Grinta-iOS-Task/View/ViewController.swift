@@ -28,21 +28,6 @@ class ViewController: UIViewController {
            bindViewModelsToViews()
        }
 
-    @IBAction func segmentAction(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            print("")
-//            matchVM.matchesList
-//                .bind(to: matchVM.currentMatchesList)
-//                .disposed(by: disposeBag)
-        case 1:
-            print("")
-//            matchVM.currentMatchesList.accept(matchVM.favoruiteMatchesList.value)
-        default:
-            break
-        }
-    }
-    
 }
 //MARK: - Rx Functions
 extension ViewController {
@@ -89,7 +74,6 @@ extension ViewController {
         
         matchVM.currentMatchesList
             .map { matches in
-                // Categorize your matches into sections based on the day
                 let categorizedMatches = self.matchVM.categorizeMatches(matches)
  
                 return categorizedMatches.map { date, matches in
