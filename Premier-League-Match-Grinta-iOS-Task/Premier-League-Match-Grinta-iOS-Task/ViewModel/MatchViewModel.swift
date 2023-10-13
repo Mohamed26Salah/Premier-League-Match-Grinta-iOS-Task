@@ -124,6 +124,32 @@ extension MatchViewModel {
 //MARK: - DataManager Helper Functions
 extension MatchViewModel {
     func createFavouriteObject(match: AnimatableSectionModel<String, Match>.Item) -> FavouriteMatch {
-        return FavouriteMatch(id: match.id, homeTeamImage: match.homeTeam.crest, awayTeamImage: match.awayTeam.crest, homeTeamName: match.homeTeam.name ?? "N/A", awayTeamName: match.awayTeam.name ?? "N/A", utcDate: match.utcDate, matchday: match.matchday, winner: match.score.winner?.rawValue ?? "N/A", fullTimeScoreHome: match.score.fullTime.home, fullTimeScoreAway: match.score.fullTime.away, competitionCode: match.competition.code, competitionName: match.competition.name)
+        return FavouriteMatch(id: match.id,
+                              homeTeamImage: match.homeTeam.crest,
+                              awayTeamImage: match.awayTeam.crest,
+                              homeTeamName: match.homeTeam.name ?? "N/A",
+                              awayTeamName: match.awayTeam.name ?? "N/A",
+                              utcDate: match.utcDate,
+                              matchday: match.matchday,
+                              winner: match.score.winner?.rawValue,
+                              fullTimeScoreHome: match.score.fullTime.home,
+                              fullTimeScoreAway: match.score.fullTime.away,
+                              competitionCode: match.competition.code,
+                              competitionName: match.competition.name)
+    }
+    //Update the old matches, that was saved before it was played
+    func updateMatches() {
+        let favouriteDataManger = FavouritesManager.shared()
+        let matchesToUpdate = favouriteDataManger.fetchMatchesToUpdate()
+        var somethingChanged: Bool = false
+        matchesToUpdate.forEach { match in
+            if let updatedMatch = matchesModel?.matches.first(where: { $0.id == match.id }), updatedMatch.score.winner != nil {
+                somethingChanged = true
+                favouriteDataManger.updateMatchInRealm(match: match, with: updatedMatch)
+            }
+        }
+        if somethingChanged {
+            favoruiteMatchesList.accept(favouriteDataManger.getAllFavoriteMatches())
+        }
     }
 }

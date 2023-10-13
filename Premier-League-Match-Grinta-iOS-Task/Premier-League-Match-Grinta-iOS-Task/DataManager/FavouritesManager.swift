@@ -76,6 +76,29 @@ class FavouritesManager {
             return Match(competition: competition, id: favoriteMatch.id, utcDate: favoriteMatch.utcDate, matchday: favoriteMatch.matchday, homeTeam: homeTeam, awayTeam: awayTeam, score: score)
         }
     }
+    //Update Old Data in DataBase
+    func fetchMatchesToUpdate() -> Results<FavouriteMatch> {
+        let matchesToUpdate = realm.objects(FavouriteMatch.self).filter("winner == nil")
+        return matchesToUpdate
+    }
+
+    func updateMatchInRealm(match: FavouriteMatch, with updatedMatch: Match) {
+        try! realm.write {
+            match.winner = updatedMatch.score.winner?.rawValue
+            match.fullTimeScoreHome = updatedMatch.score.fullTime.home
+            match.fullTimeScoreAway = updatedMatch.score.fullTime.away
+        }
+    }
+//    func updateMatch(withId id: Int, winner: Winner? = nil, homeScore: Int? = nil, awayScore: Int? = nil) {
+//        let realm = try! Realm()
+//        if let match = realm.object(ofType: FavouriteMatch.self, forPrimaryKey: id) {
+//            try! realm.write {
+//                match.winner = winner?.rawValue
+//                match.fullTimeScoreHome = homeScore
+//                match.fullTimeScoreAway = awayScore
+//            }
+//        }
+//    }
 
     func returnDataBaseURL() -> String {
         if let realmURL = Realm.Configuration.defaultConfiguration.fileURL {

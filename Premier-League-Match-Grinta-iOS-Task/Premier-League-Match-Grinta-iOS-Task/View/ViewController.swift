@@ -27,7 +27,6 @@ class ViewController: UIViewController {
            bindViewsToViewModels()
            bindViewModelsToViews()
        }
-
 }
 //MARK: - Rx Functions
 extension ViewController {
@@ -99,6 +98,7 @@ extension ViewController {
                 case 0:
                     matchVM.currentMatchesList.accept(matches)
                 case 1:
+                    matchVM.updateMatches()
                     matchVM.currentMatchesList.accept(self.matchVM.favoruiteMatchesList.value)
                 default:
                     break
