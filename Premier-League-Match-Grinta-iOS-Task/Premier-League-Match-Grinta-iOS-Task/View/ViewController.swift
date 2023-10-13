@@ -26,6 +26,7 @@ class ViewController: UIViewController {
            bindTableView()
            bindViewsToViewModels()
            bindViewModelsToViews()
+           handleErrors()
        }
 }
 //MARK: - Rx Functions
@@ -89,23 +90,28 @@ extension ViewController {
     }
     func bindViewModelsToViews() {
         matchVM.selectedSegmentIndex
-            .withLatestFrom(matchVM.matchesList) { index, matches in
-                return (index, matches)
-            }
-            .subscribe(onNext: { [weak self] index, matches in
-                guard let self = self else { return }
-                switch index {
-                case 0:
-                    matchVM.currentMatchesList.accept(matches)
-                case 1:
-                    matchVM.updateMatches()
-                    matchVM.currentMatchesList.accept(self.matchVM.favoruiteMatchesList.value)
-                default:
-                    break
-                }
+            .filter { $0 == 0 }
+            .withLatestFrom(matchVM.matchesList)
+            .subscribe(onNext: { [weak self] matches in
+                self?.matchVM.currentMatchesList.accept(matches)
+            })
+            .disposed(by: disposeBag)
+
+        matchVM.selectedSegmentIndex
+            .filter { $0 == 1 }
+            .subscribe(onNext: { [weak self] _ in
+                self?.matchVM.updateMatches()
+                self?.matchVM.currentMatchesList.accept(self?.matchVM.favoruiteMatchesList.value ?? [])
             })
             .disposed(by: disposeBag)
         
+    }
+    func handleErrors() {
+        matchVM.errorSubject
+            .subscribe { error in
+                self.show(messageAlert: "Error", message: error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
     }
 }
 

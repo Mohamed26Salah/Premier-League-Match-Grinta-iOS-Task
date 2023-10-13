@@ -13,6 +13,7 @@
 		ABC6215C2AD879A700ABD918 /* FavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */; };
 		ABC6215F2AD87C0700ABD918 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6215E2AD87C0700ABD918 /* RealmSwift */; };
 		ABC621612AD87F9B00ABD918 /* favouriteMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */; };
+		ABC6216F2AD98FB300ABD918 /* UIViewController + Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6216E2AD98FB300ABD918 /* UIViewController + Extenstion.swift */; };
 		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
 		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
 		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 		ABC621522AD83CE500ABD918 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
 		ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMatch.swift; sourceTree = "<group>"; };
+		ABC6216E2AD98FB300ABD918 /* UIViewController + Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extenstion.swift"; sourceTree = "<group>"; };
 		ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		ABC6216D2AD98F9800ABD918 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				ABC6216E2AD98FB300ABD918 /* UIViewController + Extenstion.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
 		ABEFBCFB2AD82B3800AEBD88 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 				ABEFBD542AD82C5C00AEBD88 /* Networking */,
 				ABC6215A2AD8798600ABD918 /* DataManager */,
 				ABEFBD572AD82C8100AEBD88 /* Resources */,
+				ABC6216D2AD98F9800ABD918 /* Extenstions */,
 				ABEFBD102AD82B3900AEBD88 /* Assets.xcassets */,
 				ABEFBD122AD82B3900AEBD88 /* LaunchScreen.storyboard */,
 				ABEFBD152AD82B3900AEBD88 /* Info.plist */,
@@ -444,6 +455,7 @@
 				ABEFBD562AD82C6F00AEBD88 /* APIManager.swift in Sources */,
 				ABEFBD5F2AD8301E00AEBD88 /* MatchTableViewCell.swift in Sources */,
 				ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */,
+				ABC6216F2AD98FB300ABD918 /* UIViewController + Extenstion.swift in Sources */,
 				ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */,
 				ABEFBD592AD82C9200AEBD88 /* Constants.swift in Sources */,
 				ABEFBD5B2AD82D4500AEBD88 /* SecurityConstants.swift in Sources */,
