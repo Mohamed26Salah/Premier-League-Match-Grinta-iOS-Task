@@ -90,18 +90,17 @@ extension ViewController {
     }
     func bindViewModelsToViews() {
         matchVM.selectedSegmentIndex
-            .filter { $0 == 0 }
-            .withLatestFrom(matchVM.matchesList)
-            .subscribe(onNext: { [weak self] matches in
-                self?.matchVM.currentMatchesList.accept(matches)
-            })
-            .disposed(by: disposeBag)
-
-        matchVM.selectedSegmentIndex
-            .filter { $0 == 1 }
-            .subscribe(onNext: { [weak self] _ in
-                self?.matchVM.updateMatches()
-                self?.matchVM.currentMatchesList.accept(self?.matchVM.favoruiteMatchesList.value ?? [])
+            .subscribe(onNext: { [weak self] index in
+                guard let self = self else { return }
+                switch index {
+                case 0:
+                    self.matchVM.currentMatchesList.accept(self.matchVM.matchesList.value)
+                case 1:
+                    self.matchVM.updateMatches()
+                    self.matchVM.currentMatchesList.accept(self.matchVM.favoruiteMatchesList.value)
+                default:
+                    break
+                }
             })
             .disposed(by: disposeBag)
         

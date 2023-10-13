@@ -23,7 +23,8 @@ class MatchViewModel {
 
     //out
     var currentMatchesList = PublishRelay<[Match]>.init()
-    var matchesList = PublishRelay<[Match]>.init()
+//    var matchesList = PublishRelay<[Match]>.init()
+    var matchesList = BehaviorRelay<[Match]>(value: [])
     var favoruiteMatchesList = BehaviorRelay<[Match]>(value: FavouritesManager.shared().getAllFavoriteMatches())
     var showLoading = BehaviorRelay<Bool>(value: false)
     var errorSubject = PublishSubject<Error>()
