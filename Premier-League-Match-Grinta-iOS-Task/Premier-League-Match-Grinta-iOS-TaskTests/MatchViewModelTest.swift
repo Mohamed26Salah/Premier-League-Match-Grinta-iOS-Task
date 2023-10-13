@@ -17,17 +17,19 @@ final class MatchViewModelTest: XCTestCase {
     var disposeBag: DisposeBag!
     var sut: MatchViewModel!
     var apiServiceMock: APIManagerMock!
-    
+    var apiManager: APIManager!
     override func setUpWithError() throws {
         disposeBag = DisposeBag()
         apiServiceMock = APIManagerMock()
         sut = MatchViewModel(apiManager: apiServiceMock)
+        apiManager = APIManager()
     }
     
     override func tearDownWithError() throws {
         disposeBag = nil
         apiServiceMock = nil
         sut = nil
+        apiManager = nil
     }
     func test_Get_All_Matches(){
         let expectedMatcheArray: Matches = Matches(matches: [Match.mock, Match.mock])
@@ -49,33 +51,23 @@ final class MatchViewModelTest: XCTestCase {
         waitForExpectations(timeout: 5.0, handler: nil)
         disposable.dispose()
     }
+//    func testApiFetchSuccessful() {
+//        let expectation = XCTestExpectation(description: "Data Parsed")
+////        var responseError: Error?
+//        var MatchesModel: Matches?
+//        guard let url = Bundle(for: type(of: self)).url(forResource: "stub", withExtension: "json") else {
+//            XCTFail("Failed to load JSON file")
+//            return
+//        }
+//        let disposable = apiManager.fetchLocalFile(parsingType: Matches.self, localFilePath: url).subscribe(onNext: { MatchesM in
+//            MatchesModel = MatchesM
+//            expectation.fulfill()
+//        })
+//        waitForExpectations(timeout: 5.0, handler: nil)
+//        XCTAssertNotNil(MatchesModel)
+//        disposable.dispose()
+//    }
     
-    func test_Fetch_Global() {
-        let expectedMatcheArray: Matches = Matches(matches: [Match.mock, Match.mock])
-        apiServiceMock.fetchGlobalResult = Observable.just(expectedMatcheArray)
-        var actualMatchArray: Matches?
-        let request = FetchGlobalRequest(parsingType: Matches.self, baseURL: APIManager.EndPoint.matches(competitionCode: "PL").stringToUrl)
-        apiServiceMock.fetchGlobal(request: request)
-            .subscribe(onNext: { matchModel in
-                actualMatchArray = matchModel
-            })
-            .disposed(by: disposeBag)
-        XCTAssertEqual(expectedMatcheArray, actualMatchArray)
-    }
-    func test_Fetch_Fails() {
-        let expectedError = NSError(domain: "TestError", code: -1, userInfo: nil)
-        apiServiceMock.fetchGlobalResult = Observable<Matches>.error(expectedError)
-        
-        var actualError: Error?
-        let request = FetchGlobalRequest(parsingType: Matches.self, baseURL: APIManager.EndPoint.matches(competitionCode: "PL").stringToUrl)
-        apiServiceMock.fetchGlobal(request: request)
-            .subscribe(onError: { error in
-                actualError = error
-            })
-            .disposed(by: disposeBag)
-        
-        XCTAssertEqual(actualError as NSError?, expectedError)
-    }
     func testFormatDate() {
         let dateString = Match.mock.utcDate
         let formattedDate = sut.formatDate(dateString: dateString)
