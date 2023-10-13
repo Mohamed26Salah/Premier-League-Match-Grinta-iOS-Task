@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3FD9512AD9FC2C0085A922 /* Bundle + UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FD9502AD9FC2C0085A922 /* Bundle + UnitTest.swift */; };
 		ABC621532AD83CE500ABD918 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621522AD83CE500ABD918 /* MatchViewModel.swift */; };
 		ABC621562AD846CC00ABD918 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621552AD846CC00ABD918 /* SDWebImageSVGCoder */; };
 		ABC621592AD8590B00ABD918 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621582AD8590B00ABD918 /* RxDataSources */; };
@@ -85,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB3FD94F2AD9FBF70085A922 /* stub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
+		AB3FD9502AD9FC2C0085A922 /* Bundle + UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + UnitTest.swift"; sourceTree = "<group>"; };
 		ABC621522AD83CE500ABD918 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
 		ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMatch.swift; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				ABEFBD1E2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift */,
 				ABC621822AD99EE000ABD918 /* MatchViewModelTest.swift */,
 				ABC621702AD99D8D00ABD918 /* APIManagerMock.swift */,
+				AB3FD94F2AD9FBF70085A922 /* stub.json */,
+				AB3FD9502AD9FC2C0085A922 /* Bundle + UnitTest.swift */,
 			);
 			path = "Premier-League-Match-Grinta-iOS-TaskTests";
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				ABC621712AD99D8E00ABD918 /* APIManagerMock.swift in Sources */,
 				ABC621832AD99EE000ABD918 /* MatchViewModelTest.swift in Sources */,
 				ABEFBD1F2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift in Sources */,
+				AB3FD9512AD9FC2C0085A922 /* Bundle + UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
