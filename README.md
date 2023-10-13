@@ -24,13 +24,16 @@ The Premier League Match App is an iOS application built using Swift and UIKit. 
 - Automatically update unplayed matches with scores when available.
 - Leveraging RxSwift for a responsive and reactive user experience.
 - Data storage with Realm for offline access.
+- Reactive Integration:** Seamlessly integrates with RxSwift for reactive updates to your table view.
+- Effortless Data Binding:** Provides an elegant and efficient way to bind data to your table view.
+- Smooth Animations:** Enables smooth animations when your data source changes, enhancing the user experience.
 - Unit tests to ensure code quality.
 
 ## Requirements
 - Xcode (12.0 or higher)
 - Swift (5.0 or higher)
 - iOS (13.0 or higher)
-- CocoaPods (for RxSwift and Realm, if applicable)
+- CocoaPods (for RxSwift, RxDataSource, SDWebImage, optionallyDecodable and Realm, if applicable)
 
 ## Installation
 1. Clone the repository.
@@ -48,6 +51,9 @@ If you're using CocoaPods, run `pod install` in the project directory to install
 
 ## How It Works
 The app fetches data from a Premier League API to display information about matches. It uses RxSwift for a responsive and reactive UI, and Realm for storing match and favorite data locally. When you add an unplayed match to your favorites, the app monitors the API for score updates, and it will automatically update the match when the results are available.
+
+## RxDataSource for Animation
+The app also utilizes [RxDataSource](https://github.com/RxSwiftCommunity/RxDataSources) to bring animation to life in the table view. RxDataSource simplifies the setup and management of the table view, enabling smooth and intuitive animations when your data source changes. Whether you're viewing match scores or adding matches to your favorites, RxDataSource ensures a visually pleasing and interactive user interface.
 
 ## Contributing
 We welcome contributions from the community. If you'd like to contribute to the project, please follow these steps:
