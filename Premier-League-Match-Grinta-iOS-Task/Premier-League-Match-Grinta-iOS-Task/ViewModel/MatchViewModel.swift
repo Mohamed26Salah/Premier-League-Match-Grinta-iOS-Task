@@ -42,10 +42,10 @@ class MatchViewModel {
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { matchesModel in
+                    self.showLoading.accept(false)
                     self.matchesModel = matchesModel
                     self.matchesList.accept(matchesModel.matches)
                     self.currentMatchesList.accept(matchesModel.matches)
-                    self.showLoading.accept(false)
                 },
                 onError: { error in
                     self.showLoading.accept(false)

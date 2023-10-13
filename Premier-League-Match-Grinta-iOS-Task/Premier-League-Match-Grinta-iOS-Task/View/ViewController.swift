@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var matchTableView: UITableView!
     @IBOutlet weak var segmentOutlet: UISegmentedControl!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let disposeBag = DisposeBag()
     let matchVM = MatchViewModel()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
            bindViewsToViewModels()
            bindViewModelsToViews()
            handleErrors()
+           handleLoadingIndicator()
        }
 }
 //MARK: - Rx Functions
@@ -112,6 +114,19 @@ extension ViewController {
             }
             .disposed(by: disposeBag)
     }
+    func handleLoadingIndicator() {
+        matchVM.showLoading
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isLoading in
+                if isLoading {
+                    self?.activityIndicator.startAnimating()
+                } else {
+                    self?.activityIndicator.stopAnimating()
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
 }
 
 

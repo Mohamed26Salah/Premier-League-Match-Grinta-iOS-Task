@@ -28,13 +28,18 @@
                                 <rect key="frame" x="0.0" y="124" width="393" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nC0-1H-Jd9">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Rwj-HS-tTS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Tq-VF-Kgv"/>
                             <constraint firstItem="7OZ-3M-nje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="3RB-eO-BjY"/>
+                            <constraint firstItem="nC0-1H-Jd9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kyd-8I-t6D"/>
                             <constraint firstItem="Rwj-HS-tTS" firstAttribute="top" secondItem="7OZ-3M-nje" secondAttribute="bottom" constant="8" id="PpS-W3-Pxn"/>
+                            <constraint firstItem="nC0-1H-Jd9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQU-nk-Y0c"/>
                             <constraint firstItem="7OZ-3M-nje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="r0m-Kv-QrA"/>
                             <constraint firstItem="Rwj-HS-tTS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rKG-Kt-qCi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7OZ-3M-nje" secondAttribute="trailing" constant="95" id="xSJ-7K-scS"/>
@@ -42,6 +47,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="nC0-1H-Jd9" id="Xtc-rj-iLd"/>
                         <outlet property="matchTableView" destination="Rwj-HS-tTS" id="5h2-PE-FKJ"/>
                         <outlet property="segmentOutlet" destination="7OZ-3M-nje" id="cc9-OY-cvK"/>
                     </connections>
