@@ -5,7 +5,11 @@ The goal is to create a sample app that displays information about the English P
 ![App Screenshot 1](Media/1.PNG)
 ![App Screenshot 2](Media/2.PNG)
 ![App GIF](Media/3.gif)
-
+<div style="display: flex;">
+<img src="Media/1.PNG" alt="Screenshot 1" width="200">
+<img src="Media/2.PNG" alt="Screenshot 1" width="200">
+<img src="Media/3.gif" alt="Screenshot 1" width="200">
+</div>
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
