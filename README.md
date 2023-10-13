@@ -18,7 +18,7 @@ The goal is to create a sample app that displays information about the English P
 - [License](#license)
 
 ## Introduction
-The Premier League Match App is an iOS application built using Swift and UIKit. It provides users with real-time data about Premier League matches, including information about both played and unplayed matches, match scores, and match schedules. Users can also add matches to their favorites, and unplayed matches are automatically updated when the match results are available. The app leverages RxSwift for reactive programming and Realm for local data storage. It also includes unit tests to ensure code reliability.
+The Premier League Match App is an iOS application built using Swift and UIKit. It provides users with real-time data about Premier League matches, including information about both played and unplayed matches, match scores, and match schedules. Users can also add matches to their favorites, and unplayed matches are automatically updated when the match results are available. The app leverages RxSwift for reactive programming, RxDataSource for animations, and Realm for local data storage. It also includes unit tests to ensure code reliability.
 
 ## Features
 - View and search for Premier League matches.
