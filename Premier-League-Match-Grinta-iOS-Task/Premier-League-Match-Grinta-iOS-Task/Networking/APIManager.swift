@@ -10,32 +10,37 @@ import Alamofire
 import RxSwift
 import RxCocoa
 
-protocol APIClientProtocol {
-    func fetchGlobal<T: Codable>(
-        parsingType: T.Type,
-        baseURL: URL,
-        attributes: [String]?,
-        queryParameters: [String: String]?,
-        jsonBody: [String: Any]?,
-        headers: [String: String]?
-    ) -> Observable<T>
-    func fetchLocalFile<T: Codable>(
-        parsingType: T.Type,
-        localFilePath: URL
-    ) -> Observable<T>
-}
+struct FetchGlobalRequest<T: Codable> {
+    let parsingType: T.Type
+    let baseURL: URL
+    let attributes: [String]?
+    let queryParameters: [String: String]?
+    let jsonBody: [String: Any]?
+    let headers: [String: String]?
 
-extension APIClientProtocol {
-    func fetchGlobal<T: Codable>(
+    init(
         parsingType: T.Type,
         baseURL: URL,
         attributes: [String]? = nil,
         queryParameters: [String: String]? = nil,
         jsonBody: [String: Any]? = nil,
         headers: [String: String]? = nil
-    ) -> Observable<T> {
-        return fetchGlobal(parsingType: parsingType, baseURL: baseURL, attributes: attributes, queryParameters: queryParameters, jsonBody: nil, headers: headers)
+    ) {
+        self.parsingType = parsingType
+        self.baseURL = baseURL
+        self.attributes = attributes
+        self.queryParameters = queryParameters
+        self.jsonBody = jsonBody
+        self.headers = headers
     }
+}
+protocol APIClientProtocol {
+    func fetchGlobal<T: Codable>(request: FetchGlobalRequest<T>) -> Observable<T>
+    
+    func fetchLocalFile<T: Codable>(
+        parsingType: T.Type,
+        localFilePath: URL
+    ) -> Observable<T>
 }
 
 class APIManager: APIClientProtocol {
@@ -88,22 +93,14 @@ class APIManager: APIClientProtocol {
         }
         return request
     }
-
-    func fetchGlobal<T: Codable>(
-        parsingType: T.Type,
-        baseURL: URL,
-        attributes: [String]? = nil,
-        queryParameters: [String: String]? = nil,
-        jsonBody: [String: Any]? = nil,
-        headers: [String: String]? = nil
-    ) -> Observable<T> {
+    func fetchGlobal<T>(request: FetchGlobalRequest<T>) -> Observable<T> {
         return Observable<T>.create { observer in
-            guard let url = self.buildURL(baseURL: baseURL, attributes: attributes, queryParameters: queryParameters) else {
+            guard let url = self.buildURL(baseURL: request.baseURL, attributes: request.attributes, queryParameters: request.queryParameters) else {
                 observer.onError(NSError(domain: "Invalid URL", code: -1, userInfo: nil))
                 return Disposables.create()
             }
-            let method = jsonBody != nil ? "POST" : "GET"
-            let request = self.buildRequest(url: url, method: method, jsonBody: jsonBody, headers: headers)
+            let method = request.jsonBody != nil ? "POST" : "GET"
+            let request = self.buildRequest(url: url, method: method, jsonBody: request.jsonBody, headers: request.headers)
             AF.request(request).responseDecodable(of: T.self) { response in
                 switch response.result {
                 case .success(let value):
@@ -116,7 +113,7 @@ class APIManager: APIClientProtocol {
             return Disposables.create()
         }
     }
-
+    
     func fetchLocalFile<T: Codable>(
         parsingType: T.Type,
         localFilePath: URL

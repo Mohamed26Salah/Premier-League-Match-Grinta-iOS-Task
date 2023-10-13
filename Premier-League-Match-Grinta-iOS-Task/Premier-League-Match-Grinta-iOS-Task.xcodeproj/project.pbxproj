@@ -14,6 +14,17 @@
 		ABC6215F2AD87C0700ABD918 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6215E2AD87C0700ABD918 /* RealmSwift */; };
 		ABC621612AD87F9B00ABD918 /* favouriteMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */; };
 		ABC6216F2AD98FB300ABD918 /* UIViewController + Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6216E2AD98FB300ABD918 /* UIViewController + Extenstion.swift */; };
+		ABC621712AD99D8E00ABD918 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621702AD99D8D00ABD918 /* APIManagerMock.swift */; };
+		ABC621732AD99E1D00ABD918 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621722AD99E1D00ABD918 /* RxSwift */; };
+		ABC621752AD99E5100ABD918 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621742AD99E5100ABD918 /* Alamofire */; };
+		ABC621772AD99E6E00ABD918 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621762AD99E6E00ABD918 /* RxRelay */; };
+		ABC621792AD99E7400ABD918 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621782AD99E7400ABD918 /* OptionallyDecodable */; };
+		ABC6217B2AD99E7800ABD918 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6217A2AD99E7800ABD918 /* SDWebImageSwiftUI */; };
+		ABC6217D2AD99E7E00ABD918 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6217C2AD99E7E00ABD918 /* RealmSwift */; };
+		ABC6217F2AD99E8500ABD918 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = ABC6217E2AD99E8500ABD918 /* RxDataSources */; };
+		ABC621832AD99EE000ABD918 /* MatchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC621822AD99EE000ABD918 /* MatchViewModelTest.swift */; };
+		ABC621852AD9A42B00ABD918 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621842AD9A42B00ABD918 /* RxBlocking */; };
+		ABC621872AD9A43200ABD918 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ABC621862AD9A43200ABD918 /* RxCocoa */; };
 		ABEFBD082AD82B3800AEBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */; };
 		ABEFBD0A2AD82B3800AEBD88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */; };
 		ABEFBD0C2AD82B3800AEBD88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFBD0B2AD82B3800AEBD88 /* ViewController.swift */; };
@@ -78,6 +89,8 @@
 		ABC6215B2AD879A700ABD918 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
 		ABC621602AD87F9B00ABD918 /* favouriteMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMatch.swift; sourceTree = "<group>"; };
 		ABC6216E2AD98FB300ABD918 /* UIViewController + Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extenstion.swift"; sourceTree = "<group>"; };
+		ABC621702AD99D8D00ABD918 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		ABC621822AD99EE000ABD918 /* MatchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModelTest.swift; sourceTree = "<group>"; };
 		ABEFBD042AD82B3800AEBD88 /* Premier-League-Match-Grinta-iOS-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier-League-Match-Grinta-iOS-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFBD072AD82B3800AEBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEFBD092AD82B3800AEBD88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +136,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC6217B2AD99E7800ABD918 /* SDWebImageSwiftUI in Frameworks */,
+				ABC621852AD9A42B00ABD918 /* RxBlocking in Frameworks */,
+				ABC621872AD9A43200ABD918 /* RxCocoa in Frameworks */,
+				ABC621792AD99E7400ABD918 /* OptionallyDecodable in Frameworks */,
+				ABC6217D2AD99E7E00ABD918 /* RealmSwift in Frameworks */,
+				ABC621752AD99E5100ABD918 /* Alamofire in Frameworks */,
+				ABC621732AD99E1D00ABD918 /* RxSwift in Frameworks */,
+				ABC6217F2AD99E8500ABD918 /* RxDataSources in Frameworks */,
+				ABC621772AD99E6E00ABD918 /* RxRelay in Frameworks */,
 				ABEFBD4E2AD82BB100AEBD88 /* RxTest-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				ABEFBD1E2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift */,
+				ABC621822AD99EE000ABD918 /* MatchViewModelTest.swift */,
+				ABC621702AD99D8D00ABD918 /* APIManagerMock.swift */,
 			);
 			path = "Premier-League-Match-Grinta-iOS-TaskTests";
 			sourceTree = "<group>";
@@ -337,6 +361,15 @@
 			name = "Premier-League-Match-Grinta-iOS-TaskTests";
 			packageProductDependencies = (
 				ABEFBD4D2AD82BB100AEBD88 /* RxTest-Dynamic */,
+				ABC621722AD99E1D00ABD918 /* RxSwift */,
+				ABC621742AD99E5100ABD918 /* Alamofire */,
+				ABC621762AD99E6E00ABD918 /* RxRelay */,
+				ABC621782AD99E7400ABD918 /* OptionallyDecodable */,
+				ABC6217A2AD99E7800ABD918 /* SDWebImageSwiftUI */,
+				ABC6217C2AD99E7E00ABD918 /* RealmSwift */,
+				ABC6217E2AD99E8500ABD918 /* RxDataSources */,
+				ABC621842AD9A42B00ABD918 /* RxBlocking */,
+				ABC621862AD9A43200ABD918 /* RxCocoa */,
 			);
 			productName = "Premier-League-Match-Grinta-iOS-TaskTests";
 			productReference = ABEFBD1A2AD82B3900AEBD88 /* Premier-League-Match-Grinta-iOS-TaskTests.xctest */;
@@ -466,6 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC621712AD99D8E00ABD918 /* APIManagerMock.swift in Sources */,
+				ABC621832AD99EE000ABD918 /* MatchViewModelTest.swift in Sources */,
 				ABEFBD1F2AD82B3900AEBD88 /* Premier_League_Match_Grinta_iOS_TaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -880,6 +915,51 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ABC6215D2AD879F700ABD918 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		ABC621722AD99E1D00ABD918 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		ABC621742AD99E5100ABD918 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD3D2AD82B7F00AEBD88 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ABC621762AD99E6E00ABD918 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		ABC621782AD99E7400ABD918 /* OptionallyDecodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD3A2AD82B7800AEBD88 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
+			productName = OptionallyDecodable;
+		};
+		ABC6217A2AD99E7800ABD918 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD402AD82B8700AEBD88 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		ABC6217C2AD99E7E00ABD918 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC6215D2AD879F700ABD918 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		ABC6217E2AD99E8500ABD918 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC621572AD858F900ABD918 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		ABC621842AD9A42B00ABD918 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		ABC621862AD9A43200ABD918 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABEFBD432AD82B9300AEBD88 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 		ABEFBD3B2AD82B7800AEBD88 /* OptionallyDecodable */ = {
 			isa = XCSwiftPackageProductDependency;

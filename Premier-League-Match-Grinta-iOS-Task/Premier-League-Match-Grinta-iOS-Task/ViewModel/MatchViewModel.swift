@@ -38,7 +38,8 @@ class MatchViewModel {
         let headers = [
          "X-Auth-Token": SecurityConstants.Links.apiKey
         ]
-        APIManager().fetchGlobal(parsingType: Matches.self, baseURL: APIManager.EndPoint.matches(competitionCode: "PL").stringToUrl, headers: headers)
+        let request = FetchGlobalRequest(parsingType: Matches.self, baseURL: APIManager.EndPoint.matches(competitionCode: "PL").stringToUrl, headers: headers)
+        apiManager.fetchGlobal(request: request)
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { matchesModel in
