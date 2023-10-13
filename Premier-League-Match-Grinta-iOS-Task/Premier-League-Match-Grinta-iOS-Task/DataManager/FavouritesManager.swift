@@ -55,9 +55,26 @@ class FavouritesManager {
         }
     }
 
-    func getAllFavoriteMatches() -> [FavouriteMatch] {
+    func getAllFavoriteMatches() -> [Match] {
         let favoriteMatches = realm.objects(FavouriteMatch.self)
-        return Array(favoriteMatches)
+        return convertFromRealmObjectToNormal(favoriteArray: Array(favoriteMatches))
+    }
+    func convertFromRealmObjectToNormal(favoriteArray: [FavouriteMatch]) -> [Match] {
+        return favoriteArray.map { favoriteMatch in
+            let competition = Competition(name: favoriteMatch.competitionName, code: favoriteMatch.competitionCode)
+            let homeTeam = Team(name: favoriteMatch.homeTeamName, crest: favoriteMatch.homeTeamImage)
+            let awayTeam = Team(name: favoriteMatch.awayTeamName, crest: favoriteMatch.awayTeamImage)
+
+            var winner: Winner? = nil
+            if let favoriteWinner = favoriteMatch.winner {
+                winner = Winner(rawValue: favoriteWinner)
+            }
+
+            let fullTimeHome = Time(home: favoriteMatch.fullTimeScoreHome, away: favoriteMatch.fullTimeScoreAway)
+            let score = Score(winner: winner, fullTime: fullTimeHome)
+
+            return Match(competition: competition, id: favoriteMatch.id, utcDate: favoriteMatch.utcDate, matchday: favoriteMatch.matchday, homeTeam: homeTeam, awayTeam: awayTeam, score: score)
+        }
     }
 
     func returnDataBaseURL() -> String {

@@ -18,13 +18,21 @@ class MatchViewModel {
         self.apiManager = apiManager
     }
     var matchesModel: Matches?
+    //In
+    let selectedSegmentIndex = BehaviorRelay<Int>(value: 0)
+
     //out
+    var currentMatchesList = PublishRelay<[Match]>.init()
     var matchesList = PublishRelay<[Match]>.init()
-    var favoruiteMatchesList = BehaviorRelay<[FavouriteMatch]>(value: FavouritesManager.shared().getAllFavoriteMatches())
+    var favoruiteMatchesList = BehaviorRelay<[Match]>(value: FavouritesManager.shared().getAllFavoriteMatches())
     var showLoading = BehaviorRelay<Bool>(value: false)
     var errorSubject = PublishSubject<Error>()
     private let disposeBag = DisposeBag()
-    func getMatches(tag: String = "under_30_minutes") {
+    func inialize() {
+        getMatches()
+        setupBinding()
+    }
+    func getMatches() {
         self.showLoading.accept(true)
         let headers = [
          "X-Auth-Token": SecurityConstants.Links.apiKey
@@ -35,6 +43,7 @@ class MatchViewModel {
                 onNext: { matchesModel in
                     self.matchesModel = matchesModel
                     self.matchesList.accept(matchesModel.matches)
+                    self.currentMatchesList.accept(matchesModel.matches)
                     self.showLoading.accept(false)
                 },
                 onError: { error in
@@ -42,6 +51,17 @@ class MatchViewModel {
                     self.errorSubject.onNext(error)
                 }
             )
+            .disposed(by: disposeBag)
+    }
+    private func setupBinding() {
+        favoruiteMatchesList
+            .subscribe(onNext: { [weak self] favoriteMatches in
+                guard let self = self else { return }
+                
+                if self.selectedSegmentIndex.value == 1 {
+                    self.currentMatchesList.accept(favoriteMatches)
+                }
+            })
             .disposed(by: disposeBag)
     }
 }

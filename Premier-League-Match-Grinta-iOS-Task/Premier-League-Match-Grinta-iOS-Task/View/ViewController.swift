@@ -22,16 +22,22 @@ class ViewController: UIViewController {
        override func viewDidLoad() {
            super.viewDidLoad()
            matchTableView.register(UINib(nibName: Constants.cellsResuable.MatchTVC, bundle: nil), forCellReuseIdentifier: Constants.cellsResuable.MatchTVC)
-           matchVM.getMatches()
+           matchVM.inialize()
            bindTableView()
+           bindViewsToViewModels()
+           bindViewModelsToViews()
        }
 
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-           print("PL")
+            print("")
+//            matchVM.matchesList
+//                .bind(to: matchVM.currentMatchesList)
+//                .disposed(by: disposeBag)
         case 1:
-            print("Favoruites")
+            print("")
+//            matchVM.currentMatchesList.accept(matchVM.favoruiteMatchesList.value)
         default:
             break
         }
@@ -81,7 +87,7 @@ extension ViewController {
             }
         )
         
-        matchVM.matchesList
+        matchVM.currentMatchesList
             .map { matches in
                 // Categorize your matches into sections based on the day
                 let categorizedMatches = self.matchVM.categorizeMatches(matches)
@@ -92,6 +98,30 @@ extension ViewController {
             }
             .bind(to: matchTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+    }
+    func bindViewsToViewModels() {
+        segmentOutlet.rx.selectedSegmentIndex
+            .bind(to: matchVM.selectedSegmentIndex)
+            .disposed(by: disposeBag)
+    }
+    func bindViewModelsToViews() {
+        matchVM.selectedSegmentIndex
+            .withLatestFrom(matchVM.matchesList) { index, matches in
+                return (index, matches)
+            }
+            .subscribe(onNext: { [weak self] index, matches in
+                guard let self = self else { return }
+                switch index {
+                case 0:
+                    matchVM.currentMatchesList.accept(matches)
+                case 1:
+                    matchVM.currentMatchesList.accept(self.matchVM.favoruiteMatchesList.value)
+                default:
+                    break
+                }
+            })
+            .disposed(by: disposeBag)
+        
     }
 }
 
