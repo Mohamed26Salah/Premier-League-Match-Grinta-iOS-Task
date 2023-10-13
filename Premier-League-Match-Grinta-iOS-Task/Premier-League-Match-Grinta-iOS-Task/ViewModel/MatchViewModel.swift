@@ -154,4 +154,4 @@ extension MatchViewModel {
             favoruiteMatchesList.accept(favouriteDataManger.getAllFavoriteMatches())
         }
     }
-}
+} 
